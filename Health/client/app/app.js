@@ -4,6 +4,7 @@ angular.module('healthApp', [
   'healthApp.auth',
   'healthApp.home',
   'healthApp.category',
+  'healthApp.posts',
   'healthApp.user',
   'healthApp.constants',
   'ngCookies',
