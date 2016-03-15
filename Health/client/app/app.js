@@ -2,7 +2,8 @@
 
 angular.module('healthApp', [
   'healthApp.auth',
-  'healthApp.admin',
+  'healthApp.home',
+  'healthApp.category',
   'healthApp.user',
   'healthApp.constants',
   'ngCookies',

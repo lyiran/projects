@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('healthApp.admin', [
+angular.module('healthApp.category', [
   'healthApp.auth',
   'ngRoute'
 ]);

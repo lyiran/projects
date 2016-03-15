@@ -2,7 +2,7 @@
 
 (function() {
 
-class AdminController {
+class HomeController {
   constructor($http, $scope, socket) {
     // Use the User $resource to fetch all users
     // this.users = User.query();
@@ -37,7 +37,7 @@ class AdminController {
   // }
 }
 
-angular.module('healthApp.admin')
-  .controller('AdminController', AdminController);
+angular.module('healthApp.home')
+  .controller('HomeController', HomeController);
 
 })();

@@ -15,8 +15,8 @@
             <a ng-href="{{item.link}}">{{item.title}}</a>
         </li>
         <li ng-show="nav.isAdmin()" ng-class="{active: nav.isActive('/')}"><a href="/">首页</a></li>
-        <li ng-class="{active: nav.isActive('/category')}"><a href="/category">分类管理</a></li>
-        <li ng-class="{active: nav.isActive('/posts')}"><a href="/posts">文章管理</a></li>
+        <li ng-show="nav.isAdmin()" ng-class="{active: nav.isActive('/category')}"><a href="/category">分类管理</a></li>
+        <li ng-show="nav.isAdmin()" ng-class="{active: nav.isActive('/posts')}"><a href="/posts">文章管理</a></li>
         <li ng-show="nav.isAdmin()" ng-class="{active: nav.isActive('/user')}"><a href="/user">用户管理</a></li>
       </ul>
 
