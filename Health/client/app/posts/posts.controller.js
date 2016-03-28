@@ -1,43 +1,64 @@
 'use strict';
 
+
 (function() {
 
-class PostsController {
-  constructor($http, $scope, socket) {
-    // Use the User $resource to fetch all users
-    // this.users = User.query();
+  $('#j-posts-manage-tab a').click(function (e) {
+    var $this = $(this);
+    $this.parent().addClass('active').siblings().removeClass('active');
+    e.preventDefault();
+    return false;
+  });
 
-    this.$http = $http;
-    this.awesomeThings = [];
 
-    $http.get('/api/things').then(response => {
-      this.awesomeThings = response.data;
-      socket.syncUpdates('thing', this.awesomeThings);
-    });
+  class PostsController {
+    constructor($http, $scope, socket) {
+      // Use the User $resource to fetch all users
+      // this.users = User.query();
 
-    $scope.$on('$destroy', function () {
-      socket.unsyncUpdates('things');
-    });
-  }
+      this.$http = $http;
+      this.posts = [];
 
-  addThing () {
-    if (this.newThing) {
-      this.$http.post('/api/things', { name: this.newThing });
-      this.newThing = '';
+      $http.get('/api/posts').then(response => {
+        this.posts = response.data;
+        socket.syncUpdates('posts', this.posts);
+      });
+
+      $scope.$on('$destroy', function () {
+        socket.unsyncUpdates('posts');
+      });
     }
+
+    switchTab (event) {
+      console.log(this);
+      console.log(event.target.addClass('active'));
+      event.preventDefault();
+      // event.target.parent().addClass('active');
+      // $('#j-posts-manage-tab a').click(function (e) {
+        // var $this = $(this);
+        // $this.parent().addClass('active').siblings().removeClass('active');
+        // event.preventDefault();
+        // return false;
+      // });
+    }
+
+    addPost () {
+      if (this.newPost) {
+        this.$http.post('/api/posts', { title: this.newPost });
+        this.newPost = '';
+      }
+    }
+
+    deletePost (post) {
+      this.$http.delete('/api/posts/' + post._id);
+    }
+
+    // delete(user) {
+    //   user.$remove();
+    //   this.users.splice(this.users.indexOf(user), 1);
+    // }
   }
 
-  deleteThing (thing) {
-    this.$http.delete('/api/things/' + thing._id);
-  }
-
-  // delete(user) {
-  //   user.$remove();
-  //   this.users.splice(this.users.indexOf(user), 1);
-  // }
-}
-
-angular.module('healthApp.posts')
-  .controller('PostsController', PostsController);
+  angular.module('healthApp.posts').controller('PostsController', PostsController);
 
 })();

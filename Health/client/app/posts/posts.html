@@ -1,11 +1,30 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
+
+      <div id="j-posts-manage-tab">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#">文章列表</a></li>
+          <li><a href="#">添加文章</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane active" id="home">ssss</div>
+          <div class="tab-pane" id="profile">.222</div>
+          <div class="tab-pane" id="messages">...</div>
+          <div class="tab-pane" id="settings">...</div>
+        </div>
+
+      </div>
+
       <!-- <h1 class="page-header">Features:</h1> -->
       <p class="page-header">文章管理：</p>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in posts.awesomeThings">
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="post in posts.posts">
         <li>
-          <a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="posts.deleteThing(thing)">&times;</button></a>
+          <a href="#" tooltip="{{post.info}}">{{post.title}}<button type="button" class="close" ng-click="posts.deletePost(post)">&times;</button></a>
         </li>
       </ul>
     </div>
@@ -14,9 +33,9 @@
   <form class="thing-form">
     <label>Syncs in realtime across clients</label>
     <p class="input-group">
-      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="posts.newThing">
+      <input type="text" class="form-control" placeholder="Add a new post here." ng-model="posts.newPost">
       <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="posts.addThing()">Add New</button>
+        <button type="submit" class="btn btn-primary" ng-click="posts.addPost()">Add New</button>
       </span>
     </p>
   </form>

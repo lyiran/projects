@@ -22,5 +22,8 @@ var db = {
 db.Thing = db.sequelize.import('../api/thing/thing.model');
 db.User = db.sequelize.import('../api/user/user.model');
 
+// 文章
+db.Post = db.sequelize.import('../api/post/post.model');
+
 
 export default db;
