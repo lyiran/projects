@@ -24,4 +24,9 @@ $(function () {
 
   managePosts.init();
 
+
+  // $('.sidebar .nav-tab a').click(function () {
+    // return false;
+  // });
+
 });

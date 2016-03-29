@@ -1,23 +1,23 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <!-- <h1 class="page-header">Features:</h1> -->
-      <p class="page-header">Features:</p>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in home.awesomeThings">
-        <li>
-          <a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="home.deleteThing(thing)">&times;</button></a>
-        </li>
-      </ul>
-    </div>
+<h1 class="page-header">仪表盘</h1>
+<div class="row placeholders">
+  <div class="col-xs-6 col-sm-3 placeholder">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="180" height="180" class="img-responsive" alt="Generic placeholder thumbnail">
+    <h4>文章</h4>
+    <span class="text-muted">共有文章22篇</span>
   </div>
-
-  <form class="thing-form">
-    <label>Syncs in realtime across clients</label>
-    <p class="input-group">
-      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="home.newThing">
-      <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="home.addThing()">Add New</button>
-      </span>
-    </p>
-  </form>
+  <div class="col-xs-6 col-sm-3 placeholder">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="180" height="180" class="img-responsive" alt="Generic placeholder thumbnail">
+    <h4>分类</h4>
+    <span class="text-muted">共有分类222</span>
+  </div>
+  <div class="col-xs-6 col-sm-3 placeholder">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="180" height="180" class="img-responsive" alt="Generic placeholder thumbnail">
+    <h4>用户</h4>
+    <span class="text-muted">用户999</span>
+  </div>
+  <div class="col-xs-6 col-sm-3 placeholder">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="180" height="180" class="img-responsive" alt="Generic placeholder thumbnail">
+    <h4>Label</h4>
+    <span class="text-muted">Something else</span>
+  </div>
 </div>

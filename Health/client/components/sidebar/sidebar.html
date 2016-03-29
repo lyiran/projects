@@ -1,0 +1,33 @@
+<div class="col-sm-3 col-md-2 sidebar" ng-show="sidebar.isLoggedIn()">
+
+  <ul class="nav nav-tab">
+    <li ng-class="{active: sidebar.isActive('/')}"><a class="collapsed" href="/"><i class="fa fa-dashboard"></i>仪表盘</a></li>
+    <li>
+      <a class="collapsed" role="tab" href="#sidebarArticleManage" ng-click="$event.preventDefault()" data-toggle="collapse"><i class="fa fa-file-text-o"></i>文章管理<span class="arrow fa fa-angle-right"></span></a>
+      <ul class="nav nav-list collapse" id="sidebarArticleManage" role="tabpanel">
+        <li ng-class="{active: sidebar.isActive('/posts_add')}"><a href="/posts_add">添加文章</a></li>
+        <li ng-class="{active: sidebar.isActive('/posts')}"><a href="/posts">所有文章</a></li>
+      </ul>
+    </li>
+    <li>
+      <a class="collapsed" role="tab" href="#sidebarCategoryManage" ng-click="$event.preventDefault()" data-toggle="collapse"><i class="fa fa-folder-open-o"></i>频道管理<span class="arrow fa fa-angle-right"></span></a>
+      <ul class="nav nav-list collapse" id="sidebarCategoryManage" role="tabpanel">
+        <li ng-class="{active: sidebar.isActive('/category_add')}"><a href="/category_add">添加频道</a></li>
+        <li ng-class="{active: sidebar.isActive('/category')}"><a href="/category">所有频道</a></li>
+      </ul>
+    </li>
+    <li>
+      <a class="collapsed" role="tab" href="#sidebarUserManage" ng-click="$event.preventDefault()" data-toggle="collapse"><i class="fa fa-user"></i>用户管理<span class="arrow fa fa-angle-right"></span></a>
+      <ul class="nav nav-list collapse" id="sidebarUserManage" role="tabpanel">
+        <li ng-class="{active: sidebar.isActive('/user')}"><a href="/user">修改密码</a></li>
+      </ul>
+    </li>
+    <li>
+      <a class="collapsed" role="tab" href="#sidebarSettings" ng-click="$event.preventDefault()" data-toggle="collapse"><i class="fa fa-gear"></i>设置<span class="arrow fa fa-angle-right"></span></a>
+      <ul class="nav nav-list collapse" id="sidebarSettings" role="tabpanel">
+        <li ng-class="{active: sidebar.isActive('/settings')}"><a href="/settings">修改密码</a></li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
