@@ -8,5 +8,11 @@ angular.module('healthApp.posts')
         controller: 'PostsController',
         controllerAs: 'posts',
         authenticate: 'posts'
+      })
+      .when('/posts/add', {
+        templateUrl: 'app/posts/posts_add.html',
+        controller: 'PostsController',
+        controllerAs: 'posts',
+        authenticate: 'posts'
       });
   });

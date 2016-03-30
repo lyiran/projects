@@ -165,10 +165,10 @@ body {
 
 // Component styles are injected through grunt
 // injector
+@import 'account/account';
 @import 'category/category';
 @import 'home/home';
 @import 'posts/posts';
-@import 'account/account';
 @import '../components/footer/footer';
 @import '../components/modal/modal';
 @import '../components/oauth-buttons/oauth-buttons';
