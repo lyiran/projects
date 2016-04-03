@@ -1,27 +1,72 @@
 <h1 class="page-header">添加文章</h1>
 
-<p>
-这是文章列表，操作说明吖
-这是文章列表，操作说明吖
-这是文章列表，操作说明吖
-这是文章列表，操作说明吖
-这是文章列表，操作说明吖
-这是文章列表，操作说明吖
-这是文章列表，操作说明吖
-</p>
 
-<p>
-这是文章列表，操作说明吖
-这是文章列表，操作说明吖
-这是文章列表，操作说明吖
-这是文章列表，操作说明吖
-这是文章列表，操作说明吖
-这是文章列表，操作说明吖
-这是文章列表，操作说明吖
-</p>
+<form class="thing-form form-horizontal form-posts">
+
+  <div class="form-group">
+    <label for="input-title" class="col-sm-1 control-label">标题</label>
+    <div class="col-sm-11">
+      <input type="text" id="input-title" class="form-control" placeholder="请输入标题">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="textarea-desc" class="col-sm-1 control-label">描述</label>
+    <div class="col-sm-11">
+      <textarea id="textarea-desc" class="form-control" placeholder="请输入文章描述"></textarea>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="textarea-cont" class="col-sm-1 control-label">内容</label>
+    <div class="col-sm-11">
+      <textarea id="textarea-cont" class="form-control" placeholder="请输入文章内容"></textarea>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="input-author" class="col-sm-1 control-label">作者</label>
+    <div class="col-sm-11">
+      <input type="text" id="input-author" class="form-control" value="Admin">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="select-status" class="col-sm-1 control-label">状态</label>
+    <div class="col-sm-1">
+      <select id="select-status" class="form-control">
+        <option value="">草稿</option>
+        <option value="">发布</option>
+      </select>
+    </div>
+    <label for="input-create-date" class="col-sm-2 control-label">创建日期</label>
+    <div class="col-sm-3">
+      <div class="input-group">
+        <input type="text" id="input-create-date" class="form-control" value="2016-03-28 10:37:23">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+      </div>
+    </div>
+    <label for="input-published-date" class="col-sm-2 control-label">发布日期</label>
+    <div class="col-sm-3">
+      <div class="input-group">
+        <input type="text" id="input-published-date" class="form-control" value="2016-03-28 10:37:23">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-btns">
+    <button class="btn btn-primary">保存</button>
+    <button class="btn btn-default">取消</button>
+  </div>
 
 
-<form class="thing-form">
+
+
+
+  <br>
+  ----
+  <br>
   <label>Syncs in realtime across clients</label>
   <p class="input-group">
     <input type="text" class="form-control" placeholder="Add a new post here." ng-model="posts.newPost">
