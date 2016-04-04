@@ -8,5 +8,11 @@ angular.module('healthApp.home')
         controller: 'CategoryController',
         controllerAs: 'category',
         authenticate: 'category'
+      })
+      .when('/category_add', {
+        templateUrl: 'app/category/category_add.html',
+        controller: 'CategoryController',
+        controllerAs: 'category',
+        authenticate: 'category'
       });
   });
